@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Numeric system converter</title>
+    </head>
+    <body>
+        <div id="navbar">
+            <h1>Numeric system converter</h1>
+        </div>
+        <hr>
+        <div class="converter">
+            <form>
+                <h3>From decimal</h3>
+                Number to convert [>=0]: <input type="number" id="dec_input" value="1715004" min="0"><br>
+                System to convert to [2-20]: <input type="number" id="sys_input" value="16" min="2" max="20"><br>
+                <input type="submit" onClick="return ConvertDec();" value="Convert">
+                <input type="submit" onClick="window.location.reload(true);" value="Reset">
+            </form>    
+            Result: <a id="dec_inputed">[Number in decimal]</a> = <a id="results">[Number in other numeric system]</a><sub id="sys_inputed"></sub><br>
+            Steps:
+            <div id="steps"></div><br>
+            Result is written from bottom to top
+        </div>
+        <div class="converter">
+            <form>
+                <h3>To decimal</h3>
+                <p style="font-weight: bold;">Converter doesn't allow lower-case letters.</p><br>
+                Number to convert [>=0]: <input type="text" id="other_input" value="1A2B3C" min="0"><br>
+                System to convert from [2-20]: <input type="number" id="sys_input_other" value="16" min="2" max="20"><br>
+                <input type="submit" onClick="return ConvertOther();" value="Convert">
+                <input type="submit" onClick="window.location.reload(true);" value="Reset">
+            </form>    
+            Result: <a id="other_inputed">[Number in other numeric system]</a> = <a id="results_other">[Number in decimal system]</a><br>
+            Steps:
+            <div id="steps_other"></div><br>
+            Result is sum of outcomes from all equations
+        </div>
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>

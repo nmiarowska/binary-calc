@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(230, 255, 253);
+}
+
+.function{
+    background-color: rgb(208, 255, 247);
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.function-box{
+    display: none;   
+}

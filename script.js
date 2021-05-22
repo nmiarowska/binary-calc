@@ -105,3 +105,17 @@ function ConvertDec(){
 
     return false;
 }
+
+function ChangeVisibility(id, parameter){
+    var element;
+    switch(id)
+    {
+        case 'btn_converter':
+            element = 'converter';
+            break;
+        default:
+            alert("Error occured!");
+            break;
+    }
+    document.getElementById(element).style.display=parameter;
+}
