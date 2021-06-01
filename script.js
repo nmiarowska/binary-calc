@@ -1,8 +1,9 @@
 var letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+
 function ConvertOther(){
-    var number = document.getElementById("other_input").value;
-    var numbers = number.toString().split('');
-    var sys_number = document.getElementById("sys_input_other").value;
+    let number = document.getElementById("other_input").value;
+    let numbers = number.toString().split('');
+    let sys_number = document.getElementById("sys_input_other").value;
 
     if (sys_number > 20)
     {
@@ -10,7 +11,7 @@ function ConvertOther(){
         return false;
     }
         
-    for (var i = 0; i < numbers.length; i++)
+    for (let i = 0; i < numbers.length; i++)
     {   
         if (numbers[i] >= 'A' && numbers[i] <='J'){
             if (sys_number <= 10)
@@ -18,7 +19,7 @@ function ConvertOther(){
                 alert("Given numeric system doesn't allow letters!");
                 return false;
             }
-            for (var j = 0; j < letters.length; j++)       
+            for (let j = 0; j < letters.length; j++)       
             {
                 if (numbers[i] == letters[j])
                 {
@@ -39,14 +40,14 @@ function ConvertOther(){
 
     document.getElementById("results_other").innerHTML = "";
     document.getElementById("steps_other").innerHTML = "";
-    var result = 0;
-    var mult = 0;
+    let result = 0;
+    let mult = 0;
     
-    for (var i = 0, j = numbers.length; i<numbers.length, j > 0; i++, j--)
+    for (let i = 0, j = numbers.length; i<numbers.length, j > 0; i++, j--)
     {
         if (numbers[i] >= 'A' && numbers[i] <='J')
         {
-            for (var k = 0; k < letters.length; k++)       
+            for (let k = 0; k < letters.length; k++)       
             {
                 if (numbers[i] == letters[k])
                 {
@@ -66,13 +67,13 @@ function ConvertOther(){
 }
 
 function ConvertDec(){
-    var dec_number = document.getElementById("dec_input").value;
-    var sys_number = document.getElementById("sys_input").value;
+    let dec_number = document.getElementById("dec_input").value;
+    let sys_number = document.getElementById("sys_input").value;
     document.getElementById("results").innerHTML = "";
     document.getElementById("steps").innerHTML = "";
-    var mod, mod2;
-    var n = dec_number;
-    var results = [];
+    let mod, mod2;
+    let n = dec_number;
+    let results = [];
 
     if (sys_number > 20)
     {
@@ -97,7 +98,7 @@ function ConvertDec(){
     document.getElementById("dec_inputed").innerHTML = (dec_number + "<sub>10</sub>");
     document.getElementById("sys_inputed").innerHTML = sys_number;
 
-    for (var i = results.length-1;  i >= 0; i--)
+    for (let i = results.length-1;  i >= 0; i--)
     {
         document.getElementById("results").innerHTML += results[i];
     }
@@ -107,7 +108,7 @@ function ConvertDec(){
 }
 
 function ChangeVisibility(id, parameter){
-    var element;
+    let element;
     switch(id)
     {
         case 'btn_converter':
