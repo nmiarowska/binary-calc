@@ -8,31 +8,34 @@
     <body>
         <div class="function">
             <h2>Numeric system converter</h2> 
-            <button id="btn_converter" onClick="ChangeVisibility(this.id,'block');">Show</button>
-            <button id="btn_converter" onClick="ChangeVisibility(this.id,'none');">Hide</button>
+            <button class="btn" id="btn_converter" onClick="ChangeVisibility(this.id);" value="none">Show</button>
             <div class="function-box" id="converter">
                 <form id="conv_1">
                     <h3>From decimal</h3>
                     Number to convert [>=0]: <input type="number" id="dec_input" value="1715004" min="0"><br>
                     System to convert to [2-20]: <input type="number" id="sys_input" value="16" min="2" max="20"><br>
-                    <input type="submit" onClick="return ConvertDec();" value="Convert">
-                </form>    
+                    <input class="btn" type="submit" onClick="return ConvertDec();" value="Convert">
+                </form>
+                <div class="results">    
                 Result: <a id="dec_inputed">[Number in decimal]</a> = <a id="results">[Number in other numeric system]</a><sub id="sys_inputed"></sub><br>
                 Steps:
                 <div id="steps"></div><br>
                 Result is written from bottom to top
+                </div>
                 <hr>
                 <form id="conv_2">
                     <h3>To decimal</h3>
                     <p style="font-weight: bold;">Converter doesn't allow lower-case letters.</p><br>
                     Number to convert [>=0]: <input type="text" id="other_input" value="1A2B3C" min="0"><br>
                     System to convert from [2-20]: <input type="number" id="sys_input_other" value="16" min="2" max="20"><br>
-                    <input type="submit" onClick="return ConvertOther();" value="Convert">
-                </form>    
+                    <input class="btn" type="submit" onClick="return ConvertOther();" value="Convert">
+                </form>   
+                <div class="results"> 
                 Result: <a id="other_inputed">[Number in other numeric system]</a> = <a id="results_other">[Number in decimal system]</a><br>
                 Steps:
                 <div id="steps_other"></div><br>
                 Result is sum of outcomes from all equations
+            </div>
             </div>
         </div>
     </body>
